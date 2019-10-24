@@ -1,0 +1,84 @@
+<div class="container">
+  <h2>Application</h2>
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" (click)="add()" data-target="#myModal">
+    Add
+  </button>
+  &nbsp;
+  <button type="button" class="btn btn-primary" (click)="UserLogin()">Login</button>
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Application</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" [(ngModel)]="data.name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" name="email" [(ngModel)]="data.email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="mobile_number">Mobile Number</label>
+              <input type="number" class="form-control" id="mobile_number" name="mobile_number" [(ngModel)]="data.mobile_number" placeholder="Enter mobile number">
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea type="text" class="form-control" id="address" name="address" [(ngModel)]="data.address" placeholder="Enter Address"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="text" class="form-control" id="password" name="password" [(ngModel)]="data.password" placeholder="Enter Password">
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="SaveData()">Submit</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile Number</th>
+      <th>Address</th>
+      <!--      <th>Password</th>-->
+      <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of responseData">
+      <td>{{ item.name }}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.mobile_number}}</td>
+      <td>{{item.address}}</td>
+      <!--      <td>{{item.password}}</td>-->
+      <td>
+        <button class="btn btn-success" (click)="updateData(item._id)"><i class="fa fa-pencil"></i></button>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteData(item._id)"><i class="fa fa-trash"></i></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
