@@ -6,6 +6,10 @@ import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {TestService} from './testService';
+import {GridModule, SharedModule} from '@progress/kendo-angular-grid';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ButtonModule} from "@progress/kendo-angular-buttons";
+
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import {TestService} from './testService';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    GridModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    ButtonModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

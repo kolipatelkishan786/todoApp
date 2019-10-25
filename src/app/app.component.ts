@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from "@angular/core";
 import {Idata} from './Idata';
 import {TestService} from './testService';
 import 'toastr';
@@ -12,9 +12,8 @@ declare let toastr: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  data: Idata = <any> {};
+  data: Idata = <any>{};
   responseData: Idata[] = [];
-
   constructor(public testService: TestService) {
   }
 
@@ -23,12 +22,12 @@ export class AppComponent implements OnInit {
   }
 
   add() {
-    this.data = <any> {};
+    this.data = <any>{};
   }
 
   loadData() {
     this.testService.getApi().subscribe((data: Idata[]) => {
-      // console.log(data);
+      console.log(data);
       this.responseData = data;
     });
   }
@@ -54,7 +53,8 @@ export class AppComponent implements OnInit {
   async updateData(_id) {
     $('#myModal').modal('show');
     let res = await this.testService.getByid(_id).toPromise();
-    this.data = <any> res;
+    console.log(res);
+    this.data = <any>res;
   }
 
   async deleteData(_id) {

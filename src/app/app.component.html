@@ -53,32 +53,46 @@
   </div>
   <br>
   <br>
-  <table class="table table-hover">
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Mobile Number</th>
-      <th>Address</th>
-      <!--      <th>Password</th>-->
-      <th colspan="2">Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let item of responseData">
-      <td>{{ item.name }}</td>
-      <td>{{item.email}}</td>
-      <td>{{item.mobile_number}}</td>
-      <td>{{item.address}}</td>
-      <!--      <td>{{item.password}}</td>-->
-      <td>
-        <button class="btn btn-success" (click)="updateData(item._id)"><i class="fa fa-pencil"></i></button>
-      </td>
-      <td>
-        <button class="btn btn-danger" (click)="deleteData(item._id)"><i class="fa fa-trash"></i></button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+<!--  <table class="table table-hover">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>Name</th>-->
+<!--      <th>Email</th>-->
+<!--      <th>Mobile Number</th>-->
+<!--      <th>Address</th>-->
+<!--      &lt;!&ndash;      <th>Password</th>&ndash;&gt;-->
+<!--      <th colspan="2">Action</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr *ngFor="let item of responseData">-->
+<!--      <td>{{ item.name }}</td>-->
+<!--      <td>{{item.email}}</td>-->
+<!--      <td>{{item.mobile_number}}</td>-->
+<!--      <td>{{item.address}}</td>-->
+<!--      &lt;!&ndash;      <td>{{item.password}}</td>&ndash;&gt;-->
+<!--      <td>-->
+<!--        <button class="btn btn-success" (click)="updateData(item._id)"><i class="fa fa-pencil"></i></button>-->
+<!--      </td>-->
+<!--      <td>-->
+<!--        <button class="btn btn-danger" (click)="deleteData(item._id)"><i class="fa fa-trash"></i></button>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+  <kendo-grid [data]="responseData" [height]="400">
+<!--    <kendo-grid-column field="_id" title="ID" width="40">-->
+<!--    </kendo-grid-column>-->
+    <kendo-grid-column field="name" title="Name" width="80"></kendo-grid-column>
+    <kendo-grid-column field="email" title="Email" width="80"></kendo-grid-column>
+    <kendo-grid-column field="mobile_number" title="Mobile Number" width="80"></kendo-grid-column>
+    <kendo-grid-column field="address" title="Address" width="50"></kendo-grid-column>
+    <kendo-grid-column title="Action" width="50">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <button kendoButton [primary]="true" [iconClass]="'fa fa-pencil fa-fw'" (click)="updateData(dataItem._id)"></button>&nbsp;
+        <button kendoButton [primary]="true" [iconClass]="'fa fa-trash fa-fw'" (click)="deleteData(dataItem._id)"></button>
+      </ng-template>
+    </kendo-grid-column>
+  </kendo-grid>
 </div>
 
