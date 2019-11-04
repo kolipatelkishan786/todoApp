@@ -10,10 +10,15 @@ import {GridModule, SharedModule} from '@progress/kendo-angular-grid';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ButtonModule} from "@progress/kendo-angular-buttons";
 
+import 'hammerjs';
+
+import {ChartsModule} from "@progress/kendo-angular-charts";
+import {ChartComponent} from './chart/chart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,7 @@ import {ButtonModule} from "@progress/kendo-angular-buttons";
     BrowserAnimationsModule,
     SharedModule,
     ButtonModule,
+    ChartsModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
