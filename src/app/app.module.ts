@@ -18,13 +18,17 @@ import {ExcelExportModule} from "@progress/kendo-angular-excel-export";
 import {ExcelComponent} from './excel/excel.component';
 import {DropDownsModule} from "@progress/kendo-angular-dropdowns";
 import { DropDownComponent } from './drop-down/drop-down.component';
+import { DialogsComponent } from './dialogs/dialogs.component';
+import { DialogsModule } from '@progress/kendo-angular-dialog';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartComponent,
     ExcelComponent,
-    DropDownComponent
+    DropDownComponent,
+    DialogsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,7 @@ import { DropDownComponent } from './drop-down/drop-down.component';
     ChartsModule,
     ExcelExportModule,
     DropDownsModule,
+    DialogsModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
