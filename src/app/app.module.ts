@@ -22,6 +22,7 @@ import { DialogsComponent } from './dialogs/dialogs.component';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { EditorModule } from '@progress/kendo-angular-editor';
 import { EditorComponent } from './editor/editor.component';
+import { DrawingComponent } from './drawing/drawing.component';
 
 
 
@@ -32,7 +33,8 @@ import { EditorComponent } from './editor/editor.component';
     ExcelComponent,
     DropDownComponent,
     DialogsComponent,
-    EditorComponent
+    EditorComponent,
+    DrawingComponent
   ],
   imports: [
     BrowserModule,
