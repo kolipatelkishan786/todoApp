@@ -14,11 +14,14 @@ import 'hammerjs';
 
 import {ChartsModule} from "@progress/kendo-angular-charts";
 import {ChartComponent} from './chart/chart.component';
+import {ExcelExportModule} from "@progress/kendo-angular-excel-export";
+import { ExcelComponent } from './excel/excel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartComponent
+    ChartComponent,
+    ExcelComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import {ChartComponent} from './chart/chart.component';
     SharedModule,
     ButtonModule,
     ChartsModule,
+    ExcelExportModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
