@@ -1,35 +1,35 @@
 <div style="margin-top: 180px">
-<button type="button" class="k-button" (click)="excelexport.save()">Export To Excel</button>
+  <button type="button" class="k-button" (click)="excelexport.save()">Export To Excel</button>
 </div>
 <kendo-excelexport [data]="responseData" [collapsible]="true" fileName="Products.xlsx" #excelexport>
   <kendo-excelexport-column field="name" [locked]="true" title="Name" [width]="200">
   </kendo-excelexport-column>
   <kendo-excelexport-column field="email" title="Email" [width]="200">
-</kendo-excelexport-column>
+  </kendo-excelexport-column>
   <kendo-excelexport-column field="mobile_number" title="Mobile Number" [width]="200">
   </kendo-excelexport-column>
   <kendo-excelexport-column field="address" title="Address" [width]="200">
   </kendo-excelexport-column>
-<!--  <kendo-excelexport-column-group title="Availability" [headerCellOptions]="{ textAlign: 'center' }">-->
-<!--    <kendo-excelexport-column field="UnitPrice" title="Unit Price" [width]="120"-->
-<!--                              [cellOptions]="{ format: '$#,##0.00' }"-->
-<!--                              [groupFooterCellOptions]="{ textAlign: 'right' }"-->
-<!--                              [footerCellOptions]="{ wrap: true, textAlign: 'center' }">-->
-<!--&lt;!&ndash;      <ng-template kendoExcelExportGroupFooterTemplate let-aggregates>&ndash;&gt;-->
-<!--&lt;!&ndash;        Sum: {{aggregates["UnitPrice"].sum | currency}}&ndash;&gt;-->
-<!--&lt;!&ndash;      </ng-template>&ndash;&gt;-->
-<!--&lt;!&ndash;      <ng-template kendoExcelExportFooterTemplate let-column="column">&ndash;&gt;-->
-<!--&lt;!&ndash;        Total {{column.title}}: {{total["UnitPrice"].sum | currency}}&ndash;&gt;-->
-<!--&lt;!&ndash;      </ng-template>&ndash;&gt;-->
-<!--    </kendo-excelexport-column>-->
-<!--    <kendo-excelexport-column field="UnitsOnOrder" title="Units On Order" [width]="120">-->
-<!--    </kendo-excelexport-column>-->
-<!--    <kendo-excelexport-column field="UnitsInStock" title="Units In Stock" [width]="120">-->
-<!--    </kendo-excelexport-column>-->
-<!--  </kendo-excelexport-column-group>-->
-<!--  <kendo-excelexport-column field="Discontinued" width="120" [hidden]="true">-->
-<!--    <ng-template kendoExcelExportGroupHeaderTemplate  let-value="value">-->
-<!--      Discontinued: {{value}}-->
-<!--    </ng-template>-->
-<!--  </kendo-excelexport-column>-->
+  <!--  <kendo-excelexport-column-group title="Availability" [headerCellOptions]="{ textAlign: 'center' }">-->
+  <!--    <kendo-excelexport-column field="UnitPrice" title="Unit Price" [width]="120"-->
+  <!--                              [cellOptions]="{ format: '$#,##0.00' }"-->
+  <!--                              [groupFooterCellOptions]="{ textAlign: 'right' }"-->
+  <!--                              [footerCellOptions]="{ wrap: true, textAlign: 'center' }">-->
+  <!--&lt;!&ndash;      <ng-template kendoExcelExportGroupFooterTemplate let-aggregates>&ndash;&gt;-->
+  <!--&lt;!&ndash;        Sum: {{aggregates["UnitPrice"].sum | currency}}&ndash;&gt;-->
+  <!--&lt;!&ndash;      </ng-template>&ndash;&gt;-->
+  <!--&lt;!&ndash;      <ng-template kendoExcelExportFooterTemplate let-column="column">&ndash;&gt;-->
+  <!--&lt;!&ndash;        Total {{column.title}}: {{total["UnitPrice"].sum | currency}}&ndash;&gt;-->
+  <!--&lt;!&ndash;      </ng-template>&ndash;&gt;-->
+  <!--    </kendo-excelexport-column>-->
+  <!--    <kendo-excelexport-column field="UnitsOnOrder" title="Units On Order" [width]="120">-->
+  <!--    </kendo-excelexport-column>-->
+  <!--    <kendo-excelexport-column field="UnitsInStock" title="Units In Stock" [width]="120">-->
+  <!--    </kendo-excelexport-column>-->
+  <!--  </kendo-excelexport-column-group>-->
+  <!--  <kendo-excelexport-column field="Discontinued" width="120" [hidden]="true">-->
+  <!--    <ng-template kendoExcelExportGroupHeaderTemplate  let-value="value">-->
+  <!--      Discontinued: {{value}}-->
+  <!--    </ng-template>-->
+  <!--  </kendo-excelexport-column>-->
 </kendo-excelexport>

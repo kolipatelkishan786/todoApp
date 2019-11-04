@@ -15,13 +15,16 @@ import 'hammerjs';
 import {ChartsModule} from "@progress/kendo-angular-charts";
 import {ChartComponent} from './chart/chart.component';
 import {ExcelExportModule} from "@progress/kendo-angular-excel-export";
-import { ExcelComponent } from './excel/excel.component';
+import {ExcelComponent} from './excel/excel.component';
+import {DropDownsModule} from "@progress/kendo-angular-dropdowns";
+import { DropDownComponent } from './drop-down/drop-down.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartComponent,
-    ExcelComponent
+    ExcelComponent,
+    DropDownComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { ExcelComponent } from './excel/excel.component';
     ButtonModule,
     ChartsModule,
     ExcelExportModule,
+    DropDownsModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
