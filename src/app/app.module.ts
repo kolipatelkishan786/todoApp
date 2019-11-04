@@ -20,6 +20,9 @@ import {DropDownsModule} from "@progress/kendo-angular-dropdowns";
 import { DropDownComponent } from './drop-down/drop-down.component';
 import { DialogsComponent } from './dialogs/dialogs.component';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
+import { EditorModule } from '@progress/kendo-angular-editor';
+import { EditorComponent } from './editor/editor.component';
+
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { DialogsModule } from '@progress/kendo-angular-dialog';
     ChartComponent,
     ExcelComponent,
     DropDownComponent,
-    DialogsComponent
+    DialogsComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,7 @@ import { DialogsModule } from '@progress/kendo-angular-dialog';
     ExcelExportModule,
     DropDownsModule,
     DialogsModule,
+    EditorModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]
