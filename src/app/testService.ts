@@ -35,7 +35,8 @@ export class TestService {
   // loginApi(condition: Idata) {
   //   return this.http.get(`${this.api}/${condition.email}&${condition.password}`);
   // }
-  login(email: string, password: string) {
-    return this.http.post(this.api, {email: email, password: password});
-  }
+
+  // login(email: string, password: string) {
+  //   return this.http.post(this.api, {email: email, password: password});
+  // }
 }

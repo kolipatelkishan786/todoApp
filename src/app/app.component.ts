@@ -64,17 +64,17 @@ export class AppComponent implements OnInit {
     toastr.success('Data Deleted Successfully!');
   }
 
-  async UserLogin() {
-    let user = {
-      email: 'k@gmail.com',
-      password: '12345'
-    };
-    // console.log(user);
-    await this.testService.login(user.email, user.password).subscribe((respose) => {
-      console.log(respose);
-      this.loadData();
-      toastr.success('User Login Successfully!');
-
-    });
-  }
+  // async UserLogin() {
+  //   let user = {
+  //     email: 'k@gmail.com',
+  //     password: '12345'
+  //   };
+  //   // console.log(user);
+  //   await this.testService.login(user.email, user.password).subscribe((respose) => {
+  //     console.log(respose);
+  //     this.loadData();
+  //     toastr.success('User Login Successfully!');
+  //
+  //   });
+  // }
 }

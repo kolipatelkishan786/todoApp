@@ -5,7 +5,7 @@
     Add
   </button>
   &nbsp;
-  <button type="button" class="btn btn-primary" (click)="UserLogin()">Login</button>
+  <!--  <button type="button" class="btn btn-primary" (click)="UserLogin()">Login</button>-->
   <!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -137,7 +137,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
       <div class="example-config">
-        <button kendo-button (click)="pdf.saveAs('info.pdf')">
+        <button kendoButton [primary]="true" (click)="pdf.saveAs('Info.pdf')">
           Save As PDF...
         </button>
       </div>
