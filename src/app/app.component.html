@@ -133,4 +133,18 @@
       <app-drawing></app-drawing>
     </div>
   </div>
+  <div class="row" style="margin-bottom: 30px; margin-top: 30px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="example-config">
+        <button kendo-button (click)="pdf.saveAs('info.pdf')">
+          Save As PDF...
+        </button>
+      </div>
+      <kendo-pdf-export #pdf paperSize="A4" margin="1cm">
+        <app-pdf></app-pdf>
+      </kendo-pdf-export>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
 </div>

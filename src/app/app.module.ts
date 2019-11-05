@@ -23,6 +23,9 @@ import { DialogsModule } from '@progress/kendo-angular-dialog';
 import { EditorModule } from '@progress/kendo-angular-editor';
 import { EditorComponent } from './editor/editor.component';
 import { DrawingComponent } from './drawing/drawing.component';
+import { PdfComponent } from './pdf/pdf.component';
+import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
+
 
 
 
@@ -34,7 +37,8 @@ import { DrawingComponent } from './drawing/drawing.component';
     DropDownComponent,
     DialogsComponent,
     EditorComponent,
-    DrawingComponent
+    DrawingComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +54,7 @@ import { DrawingComponent } from './drawing/drawing.component';
     DropDownsModule,
     DialogsModule,
     EditorModule,
+    PDFExportModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

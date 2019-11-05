@@ -1,0 +1,46 @@
+<div class="header">
+  Invoice Form
+</div>
+
+<div class="address">
+  <div class="for">
+    <h3>Invoice for</h3>
+    <p>
+      Antonio Moreno<br/> Naucalpan de Juárez<br/> México D.F., Mexico, 53500
+    </p>
+  </div>
+
+  <div class="from">
+    <h3>From</h3>
+    <p>
+      Hanna Moos <br/> Lützowplatz 456<br/> Berlin, Germany.
+    </p>
+  </div>
+</div>
+<div class="items">
+  <kendo-grid [data]="responseData" scrollable="none">
+    <kendo-grid-column field="name" title="Name">
+      <!--      <ng-template kendoGridFooterTemplate>-->
+      <!--        Total-->
+      <!--      </ng-template>-->
+    </kendo-grid-column>
+    <kendo-grid-column field="email" title="Email">
+      <!--      <ng-template kendoGridFooterTemplate>-->
+      <!--        Total-->
+      <!--      </ng-template>-->
+    </kendo-grid-column>
+    <kendo-grid-column field="mobile_number" title="Mobile Number">
+      <!--      <ng-template kendoGridFooterTemplate>-->
+      <!--        Total-->
+      <!--      </ng-template>-->
+    </kendo-grid-column>
+    <kendo-grid-column field="address" title="Address">
+      <!--      <ng-template kendoGridFooterTemplate>-->
+      <!--        Total-->
+      <!--      </ng-template>-->
+    </kendo-grid-column>
+  </kendo-grid>
+  <div class="signature">
+    Signature: ________________
+  </div>
+</div>
