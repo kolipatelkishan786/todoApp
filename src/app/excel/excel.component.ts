@@ -19,7 +19,7 @@ export class ExcelComponent implements OnInit {
 
   loadData() {
     this.testService.getApi().subscribe((data: Idata[]) => {
-      console.log(data);
+      // console.log(data);
       this.responseData = data;
     });
   }

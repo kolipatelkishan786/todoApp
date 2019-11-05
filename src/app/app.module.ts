@@ -25,8 +25,7 @@ import { EditorComponent } from './editor/editor.component';
 import { DrawingComponent } from './drawing/drawing.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
-
-
+import { InputsModule } from '@progress/kendo-angular-inputs';
 
 
 @NgModule({
@@ -55,6 +54,7 @@ import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
     DialogsModule,
     EditorModule,
     PDFExportModule,
+    InputsModule,
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Application</h2>
   <!-- Button to Open the Modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" (click)="add()" data-target="#myModal">
+  <button type="button" kendoButton [primary]="true" data-toggle="modal" (click)="add()" data-target="#myModal">
     Add
   </button>
   &nbsp;
@@ -44,8 +44,8 @@
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="SaveData()">Submit</button>
+          <button type="button" kendoButton data-dismiss="modal">Close</button>
+          <button type="button" kendoButton [primary]="true" (click)="SaveData()">Submit</button>
         </div>
 
       </div>
